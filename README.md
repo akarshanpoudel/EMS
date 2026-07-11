@@ -6,7 +6,8 @@ EventHive is a full-featured, responsive Event Management System built using Dja
 Authentication & Security
 User Management: Secure user registration, login, and logout.
 
-### Password Reset Pipeline: Complete, secure password reset system utilizing Gmail SMTP transactional mailers.
+### Password Reset Pipeline: 
+Complete, secure password reset system utilizing Gmail SMTP transactional mailers.
 
 ### Organizer Access Control: 
  Strict server-side verification ensuring only verified event creators can modify or update their events.
@@ -94,9 +95,10 @@ home/: Drives core dashboard views, interactive ticket grid matrices, multi-cond
 
 templates/: Centralized UI storage housing reusable layouts like base wrappers (base.html), authentication pages, custom dashboards, and structural layout grids (event_form.html, event_detail.html).
 
+
 ## Project Structure
 
-Plaintext
+```text
 EMS/                               # Root Project Directory
 │
 ├── .env                           # Local environment variables (Secrets & SMTP configurations)
@@ -130,7 +132,7 @@ EMS/                               # Root Project Directory
     ├── base.html                  # Global layout skeleton template
     ├── home.html                  # Core public index dashboard
     ├── event_form.html            # Context-adaptive Create/Edit event configuration sheet
-    ├── event_detail.html          # Interactive interactive seat matrix & control actions page
+    ├── event_detail.html          # Interactive seat matrix & control actions page
     ├── my_events.html             # Organizer portal equipped with update mappings
     ├── my_bookings.html           # User booking historical log
     ├── login.html                 # Login page wrapper
