@@ -6,7 +6,8 @@ EventHive is a full-featured, responsive Event Management System built using Dja
 Authentication & Security
 User Management: Secure user registration, login, and logout.
 
-### Password Reset Pipeline: Complete, secure password reset system utilizing Gmail SMTP transactional mailers.
+### Password Reset Pipeline: 
+Complete, secure password reset system utilizing Gmail SMTP transactional mailers.
 
 ### Organizer Access Control: 
  Strict server-side verification ensuring only verified event creators can modify or update their events.
@@ -106,7 +107,7 @@ EMS/                               # Root Project Directory
 │   ├── __init__.py
 │   ├── asgi.py
 │   ├── settings.py                # Main app configurations & secure SMTP stripping logic
-│   ├── urls.py                    # Global URL routing routing
+│   ├── urls.py                    # Global URL routing
 │   └── wsgi.py
 │
 ├── accounts/                      # Authentication Application
@@ -125,22 +126,66 @@ EMS/                               # Root Project Directory
 │   ├── urls.py                    # Dashboards, update endpoints, and action routes
 │   └── views.py                   # CRUD handlers, email triggers, and details code
 │
-└── templates/                     # Centralized HTML Interface Layouts
-    ├── base.html                  # Global layout skeleton template
-    ├── home.html                  # Core public index dashboard
-    ├── event_form.html            # Context-adaptive Create/Edit event configuration sheet
-    ├── event_detail.html          # Interactive interactive seat matrix & control actions page
-    ├── my_events.html             # Organizer portal equipped with update mappings
-    ├── my_bookings.html           # User booking historical log
-    ├── login.html                 # Login page wrapper
-    ├── register.html              # Sign-up page wrapper
-    │
-    └── registration/              # Django Contrib Auth Native Directory Fallbacks
-        ├── password_reset_form.html
-        ├── password_reset_done.html
-        ├── password_reset_confirm.html
-        └── password_reset_complete.html
+├── templates/                     # Centralized HTML Interface Layouts
+│   ├── base.html                  # Global layout skeleton template
+│   ├── home.html                  # Core public index dashboard
+│   ├── event_form.html            # Context-adaptive Create/Edit event configuration sheet
+│   ├── event_detail.html          # Interactive seat matrix & control actions page
+│   ├── my_events.html             # Organizer portal equipped with update mappings
+│   ├── my_bookings.html           # User booking historical log
+│   ├── login.html                 # Login page wrapper
+│   ├── register.html              # Sign-up page wrapper
+│   │
+│   └── registration/              # Django Contrib Auth Native Directory Fallbacks
+│       ├── password_reset_form.html
+│       ├── password_reset_done.html
+│       ├── password_reset_confirm.html
+│       └── password_reset_complete.html      
+│
+└── Screenshots/                   # System UI and Transactional Email Proofs
+    ├── forget_password_ui.png     # Password recovery interface
+    ├── forget_pasword_mail.png    # Sent password reset token email
+    ├── login_ui.png               # User authentication interface
+    ├── my_booking_ui.png          # Attendee booking history dashboard
+    ├── my_events_ui.png           # Organizer event management portal
+    ├── seat_booked.png            # Live updating interactive seating grid
+    ├── seat_booking_cancel_mail.png # Booking cancellation email alert
+    └── seat_confirmed_mail.png    # Booking confirmation email alert
 
+
+##  System Visuals & Dashboards
+
+Here is a visual run-through of the EventHive application interfaces and automated transactional mail pipelines.
+
+### 🖥️ Core User Interfaces (UI)
+
+#### User Authentication & Account Recovery
+*   **Login Gateway (`login_ui.png`):** Secure secure entry point for organizers and attendees.
+*   **Forgot Password Screen (`forget_password_ui.png`):** Form interface where users trigger verification links.
+
+#### Platform Management Dashboards
+*   **Organizer Management Portal (`my_events_ui.png`):** Where organizers track, edit, and modify their hosted events.
+*   **User Bookings Log (`my_booking_ui.png`):** A history log displaying all active reservations for an attendee.
+*   **Live Seating Matrix (`seat_booked.png`):** The interactive terminal layout showcasing real-time seat tracking and selections.
+
+---
+
+### ✉️ Transactional Email Pipelines (Google SMTP)
+
+#### 1. Password Reset Action
+Dispatched securely via automated channels when a credential recovery request is initialized.
+![Forgot Password Email](Screenshots/forget_pasword_mail.png)
+
+#### 2. Seat Booking Confirmation
+Sent instantly to the attendee upon a successful real-time seat reservation from the grid matrix.
+![Booking Confirmation Email](Screenshots/seat_confirmed_mail.png)
+
+#### 3. Booking Cancellation Notification
+Triggers automatically when a user relinquishes an allocated seat, safely releasing the vacancy asset back to the local database.
+![Cancellation Email](Screenshots/seat_booking_cancel_mail.png)
+
+
+    
 ## Tech Stack
 Backend Framework: Python 3.13 + Django 6.0.7
 
