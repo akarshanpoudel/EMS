@@ -6,7 +6,8 @@ EventHive is a full-featured, responsive Event Management System built using Dja
 Authentication & Security
 User Management: Secure user registration, login, and logout.
 
-### Password Reset Pipeline: Complete, secure password reset system utilizing Gmail SMTP transactional mailers.
+### Password Reset Pipeline: 
+Complete, secure password reset system utilizing Gmail SMTP transactional mailers.
 
 ### Organizer Access Control: 
  Strict server-side verification ensuring only verified event creators can modify or update their events.
