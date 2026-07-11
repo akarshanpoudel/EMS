@@ -86,8 +86,9 @@ home/: Drives core dashboard views, interactive ticket grid matrices, multi-cond
 
 templates/: Centralized UI storage housing reusable layouts like base wrappers (base.html), authentication pages, custom dashboards, and structural layout grids (event_form.html, event_detail.html).
 
-## Project Structure
-Plaintext
+### Project Structure
+
+```text
 EMS/                               # Root Project Directory
 │
 ├── .env                           # Local environment variables (Secrets & SMTP configurations)
@@ -142,6 +143,7 @@ EMS/                               # Root Project Directory
     ├── seat_booked.png            # Live updating interactive seating grid
     ├── seat_booking_cancel_mail.png # Booking cancellation email alert
     └── seat_confirmed_mail.png    # Booking confirmation email alert
+   ```
 
  ## System Visuals & Dashboards
 Here is a visual run-through of the EventHive application interfaces and automated transactional mail pipelines.
