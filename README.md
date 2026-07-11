@@ -43,9 +43,9 @@ cd EMS
 2. Set Up a Python Virtual Environment
 Bash
 python -m venv .venv
-## Activate on Windows:
+### Activate on Windows:
 .venv\Scripts\activate
-## Activate on Mac/Linux:
+### Activate on Mac/Linux:
 source .venv/bin/activate
 
 3. Install Required Dependencies
@@ -95,6 +95,7 @@ home/: Drives core dashboard views, interactive ticket grid matrices, multi-cond
 templates/: Centralized UI storage housing reusable layouts like base wrappers (base.html), authentication pages, custom dashboards, and structural layout grids (event_form.html, event_detail.html).
 
 ## Project Structure
+
 Plaintext
 EMS/                               # Root Project Directory
 │
