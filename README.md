@@ -31,7 +31,7 @@ EventHive is a full-featured, responsive Event Management System built using Dja
 ```bash
 git clone [https://github.com/yourusername/EMS.git](https://github.com/yourusername/EMS.git)
 cd EMS
-
+```
 ## 2. Set Up a Python Virtual Environment
 Bash
 python -m venv .venv
@@ -143,8 +143,7 @@ EMS/                               # Root Project Directory
     ├── seat_booking_cancel_mail.png # Booking cancellation email alert
     └── seat_confirmed_mail.png    # Booking confirmation email alert
 
-
- System Visuals & Dashboards
+ ## System Visuals & Dashboards
 Here is a visual run-through of the EventHive application interfaces and automated transactional mail pipelines.
 
 Core User Interfaces (UI)
@@ -170,7 +169,7 @@ Sent instantly to the attendee upon a successful real-time seat reservation from
 3. Booking Cancellation Notification
 Triggers automatically when a user relinquishes an allocated seat, safely releasing the vacancy asset back to the local database.
 
- Tech Stack
+## Tech Stack
 Backend Framework: Python 3.13 + Django 6.0.7
 
 Database: SQLite (Development standard)
