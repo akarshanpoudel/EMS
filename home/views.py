@@ -8,6 +8,7 @@ from .forms import EventForm
 from .models import Event, Bookings
 from django.core.mail import send_mail
 from django.conf import settings
+from django.utils import timezone
 
 # === AUTHENTICATION VIEWS ===
 
@@ -44,9 +45,15 @@ def logout_view(request):
 # === EVENT MANAGEMENT VIEWS ===
 
 def home(request):
-    events = Event.objects.all()
-    return render(request, 'home.html', {'events': events})
 
+    current_time = timezone.now()
+    
+    upcoming_events = Event.objects.filter(date__gte=current_time).order_by('date')
+    
+    context = {
+        'events': upcoming_events
+    }
+    return render(request, 'home.html', context)
 
 def create_event(request):
     form = EventForm()
