@@ -1,8 +1,9 @@
 # EventHive — Event Management System (EMS)
 
 EventHive is a full-featured, responsive Event Management System built using Django 6.0.7 and Bootstrap. It allows users to browse events, register and log in securely, reserve seats via an interactive grid system, and receive real-time email confirmations. Organizers can seamlessly create, track, and modify their own events with rich-text descriptions.
-URL:akarshan.pythonanywhere.com
+
 ---
+Check out final project at [EventHive](akarshan.pythonanywhere.com).
 
 ##  Key Features
 
